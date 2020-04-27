@@ -35,7 +35,7 @@
     <![endif]-->
 	<script>
 		function click_event(){
-				analytics.logEvent('nav_click ', {
+				firebase.analytics().logEvent('nav_click ', {
   				eventAction:'test_click_action',
   				eventCategory:'test_click_category',
   				eventLabel:'test_click_label'
@@ -567,7 +567,7 @@
 </script>
 <script>
 onload= function(){
-	analytics.logEvent('select_content', {
+	firebase.analytics().logEvent('select_content', {
   eventAction:'test_event_action',
   eventCategory:'test_event_category',
   eventLabel:'test_event_label'
