@@ -534,5 +534,30 @@
 	<script src="js/responsive-tabs.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBhI_c3WQ6kmzHTxjP22wy4Ci1HEX0jyn0",
+    authDomain: "internal-web-3ab74.firebaseapp.com",
+    databaseURL: "https://internal-web-3ab74.firebaseio.com",
+    projectId: "internal-web-3ab74",
+    storageBucket: "internal-web-3ab74.appspot.com",
+    messagingSenderId: "393780384268",
+    appId: "1:393780384268:web:9470152791fceb51c05429",
+    measurementId: "G-G8CEHY6Q7P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
 </body>
 </html>
