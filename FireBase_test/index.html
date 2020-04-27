@@ -34,13 +34,13 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script>
-		function click_event(){
+		document.querySelector('.nav-link').addEventListener('click',function(){
 				firebase.analytics().logEvent('nav_click ', {
   				eventAction:'test_click_action',
   				eventCategory:'test_click_category',
   				eventLabel:'test_click_label'
-});
-		}
+					});
+		});
 	</script>
 </head>
 <body class="barber_version">
