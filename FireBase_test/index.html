@@ -60,10 +60,20 @@
 <script>
 		function test_click(){
 				firebase.analytics().logEvent('nav_click ', {
-  				eventAction:'test_click_action',
-  				eventCategory:'test_click_category',
-  				eventLabel:'test_click_label'
+  				'eventAction':'test_click_action',
+  				'eventCategory':'test_click_category',
+  				'eventLabel':'test_click_label'
 					});
+		}
+	</script>
+	<script>
+		function userid(){
+			return(Math.floor((Math.random() * 100) + 1);
+		}
+		onload=function(){
+			firebase.analytics().logEvent('login',{
+		'userid':userid()
+			});
 		}
 	</script>
 
