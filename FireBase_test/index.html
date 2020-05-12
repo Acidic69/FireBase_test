@@ -77,14 +77,14 @@
 			 		'user_id':userid()
 			 }
 			});
-			firebase.analytics.logEvent('view_item_list',{
+			firebase.analytics().logEvent('view_item_list',{
 				'id':'1234',
 				'name':'home_page',
 				'catogory':'test_category'
 			});
 		}
 		function product_click(){
-			firebase.analytics.logEvent('select_content',{
+			firebase.analytics().logEvent('select_content',{
 				'content_type':'nav_menue',
 				'itmes':[
 				{
