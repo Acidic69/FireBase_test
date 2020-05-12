@@ -33,6 +33,45 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBhI_c3WQ6kmzHTxjP22wy4Ci1HEX0jyn0",
+    authDomain: "internal-web-3ab74.firebaseapp.com",
+    databaseURL: "https://internal-web-3ab74.firebaseio.com",
+    projectId: "internal-web-3ab74",
+    storageBucket: "internal-web-3ab74.appspot.com",
+    messagingSenderId: "393780384268",
+    appId: "1:393780384268:web:9470152791fceb51c05429",
+    measurementId: "G-G8CEHY6Q7P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script type="text/javascript">
+
+		onload=function(){
+			firebase.analytics().logEvent('purchase',{
+				"transaction_id": "24.031608523954162",
+				"value":0,
+				'item':[
+				{
+					 "id": "P12345",
+					 'name':'appointment',
+					 'category':'home_page',
+					 'price':0,
+					 'list_position':5,
+				}
+				]
+			});
+</script>
 
 </head>
 <body class="barber_version">

@@ -98,6 +98,36 @@
 			});
 
 		}
+		function product_add(){
+			firebase.analytics().logEvent('add_to_cart',{
+				'items':[
+				{
+					'id':'12345',
+					'name':'shaving',
+					'category':'home_page',
+					'list_position':1,
+					'price':'5'
+				}
+				]
+			});
+
+		}
+		function product_checkout(){
+
+		firebase.analytics().logEvent('checkout_progress',{
+				'items':[
+				{
+					'id':'1234565',
+					'name':'appointment',
+					'category':'home_page',
+					'list_position':1,
+					'price':'0'
+				}
+				]
+			});
+
+
+		}
 	</script>
 
 </head>
@@ -334,7 +364,7 @@
 						<!-- Table #1  -->
 						<div class="col-xs-12 col-lg-4">
 						  <div class="card text-center">
-							<div class="card-block">
+							<div class="card-block" onclick="product_add()">
 							  <h4 class="card-title pricing-ti"> 
 								Shaving
 							  </h4>
@@ -360,7 +390,7 @@
 						<!-- Table #1  -->
 						<div class="col-xs-12 col-lg-4">
 						  <div class="card text-center">
-							<div class="card-block">
+							<div class="card-block" onclick="product_add()">
 							  <h4 class="card-title pricing-ti"> 
 								Face Masking
 							  </h4>
@@ -386,7 +416,7 @@
 						<!-- Table #1  -->
 						<div class="col-xs-12 col-lg-4">
 						  <div class="card text-center">
-							<div class="card-block">
+							<div class="card-block" onclick="product_add()">
 							  <h4 class="card-title pricing-ti"> 
 								Hair Styling
 							  </h4>
