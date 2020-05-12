@@ -57,7 +57,7 @@
 </script>
 <script type="text/javascript">
 
-		onload=function(){
+		function product_purchase(){
 			firebase.analytics().logEvent('purchase',{
 				"transaction_id": "24.031608523954162",
 				"value":0,
@@ -74,7 +74,7 @@
 </script>
 
 </head>
-<body class="barber_version">
+<body class="barber_version" onload="product_purchase()">
 
     <!-- LOADER -->
     <div id="preloader">
