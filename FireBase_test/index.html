@@ -77,9 +77,27 @@
 			 		'user_id':userid()
 			 }
 			});
+			firebase.analytics.logEvent('view_item_list',{
+				'id':'1234',
+				'name':'home_page',
+				'catogory':'test_category'
+			});
 		}
+		function product_click(){
+			firebase.analytics.logEvent('select_content',{
+				'content_type':'nav_menue',
+				'itmes':[
+				{
+					'id':'1234',
+					'name':'home',
+					'category':'home_page',
+					'list_position':1,
+					'price':10000
+				}
+				]
+			});
 
-
+		}
 	</script>
 
 </head>
@@ -120,7 +138,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="index.html" onclick="test_click()">Home</a></li>
+						<li class="nav-item active"><a class="nav-link" href="index.html" onclick="product_click()">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="services.html" onclick="test_click()">Our Services</a></li>
 						<li class="nav-item"><a class="nav-link" href="about.html" onclick="test_click()">About Us</a></li>
 						<li class="nav-item"><a class="nav-link" href="barbers.html" onclick="test_click()">Our Barbers</a></li>
