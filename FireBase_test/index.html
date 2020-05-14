@@ -78,21 +78,21 @@
 			 }
 			});
 			firebase.analytics().logEvent('view_item_list',{
-				'id':'1234',
-				'name':'home_page',
-				'catogory':'test_category'
+				'item_id':'1234',
+				'item_name':'home_page',
+				'item_catogory':'test_category'
 			});
 		}
 		function product_click(){
-			firebase.analytics().logEvent('select_content',{
+			firebase.analytics().logEvent('select_item',{
 				'content_type':'nav_menue',
-				'itmes':[
+				'items':[
 				{
-					'id':'1234',
-					'name':'home',
-					'category':'home_page',
+					'item_id':'1234',
+					'item_name':'home',
+					'item_category':'home_page',
 					'list_position':1,
-					'price':10000
+					'value':10000
 				}
 				]
 			});
@@ -102,28 +102,30 @@
 			firebase.analytics().logEvent('add_to_cart',{
 				'items':[
 				{
-					'id':'12345',
-					'name':'shaving',
-					'category':'home_page',
+					'item_id':'12345',
+					'item_name':'shaving',
+					'item_category':'home_page',
 					'list_position':1,
-					'price':'5'
+					'value':5
 				}
-				]
+				],
+				'value':5
 			});
 
 		}
 		function product_checkout(){
 
-		firebase.analytics().logEvent('checkout_progress',{
+		firebase.analytics().logEvent('begin_checkout',{
 				'items':[
 				{
-					'id':'1234565',
-					'name':'appointment',
-					'category':'home_page',
+					'item_id':'1234565',
+					'item_name':'appointment',
+					'item_category':'home_page',
 					'list_position':1,
-					'price':'0'
+					'value':0
 				}
-				]
+				],
+				'value':0
 			});
 
 
