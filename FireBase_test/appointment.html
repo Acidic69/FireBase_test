@@ -58,6 +58,21 @@
 <script>
 
 		function product_purchase(){
+
+			gtag('event', 'purchase', {
+ 				 affiliation: 'Google Store',
+  				coupon: 'SUMMER_FUN',
+  				currency: 'USD',
+  					items: [{
+    				item_id: 'SKU_12345',
+    				item_name: 'jeggings'
+    				vaule: 9.99
+  					}],
+  				transaction_id: 'T12345',
+  				shipping: 5.99,
+  				value: 9.99
+		});
+
 			firebase.analytics().logEvent('purchase',{
 				"transaction_id": "24.031608523954162",
 				"value":0,

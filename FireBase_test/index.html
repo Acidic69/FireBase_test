@@ -41,6 +41,14 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G8CEHY6Q7P');
+</script>
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -77,6 +85,17 @@
 			 		'user_id':userid()
 			 }
 			});
+			gtag('event', 'view_item_list', {
+			  	items: [{
+			   	 item_id: 'SKU_12345',
+			    	item_name: 'jeggings',
+			    	value: 9.99,
+			   	 index: 5
+			  	}],
+			  	item_list_name: 'Related products',
+			  	item_list_id: 'related_products',
+			});
+
 			firebase.analytics().logEvent('view_item_list',{
 				'item_id':'1234',
 				'item_name':'home_page',
@@ -99,6 +118,15 @@
 
 		}
 		function product_add(){
+			gtag('event', 'add_to_cart', {
+  				currency: 'USD',
+  				items: [{
+    			item_id: 'SKU_12345',
+    			item_name: 'jeggings',
+    			value: 9.99
+  				}],
+  			value: 9.99
+			});
 			firebase.analytics().logEvent('add_to_cart',{
 				'items':[
 				{
@@ -115,7 +143,7 @@
 		}
 		function product_checkout(){
 
-		firebase.analytics().logEvent('begin_checkout',{
+		firebase.analytics().logEvent('add_shipping_info',{
 				'items':[
 				{
 					'item_id':'1234565',
