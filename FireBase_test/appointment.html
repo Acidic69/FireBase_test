@@ -29,6 +29,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-6H45');</script>
+<!-- End Google Tag Manager -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -72,28 +79,28 @@
   			currency: 'USD',
   				items: [{
     			item_id: 'SKU_12345',
-    			item_name: 'jeggings',
+    			item_name: 'jeggings gtag',
     			vaule: 9.99
   			}],
-  			transaction_id: 'T12345',
+  			transaction_id: 'T12345_gtag',
   			shipping: 5.99,
 		})
 
-			firebase.analytics().logEvent('purchase',{
-				"transaction_id": "24.031608523954162",
-				"value":0,
-				'item':[
-				{
-					 "item_id": "P12345",
-					 'item_name':'appointment',
-					 'item_category':'home_page',
-					 'price':0,
-					 'list_position':5,
-				}
-				],
-				'shipping':5.99,
-				'value':9.99
-			});
+			// firebase.analytics().logEvent('purchase',{
+			// 	"transaction_id": "24.031608523954162",
+			// 	"value":0,
+			// 	'item':[
+			// 	{
+			// 		 "item_id": "P12345",
+			// 		 'item_name':'appointment',
+			// 		 'item_category':'home_page',
+			// 		 'price':0,
+			// 		 'list_position':5,
+			// 	}
+			// 	],
+			// 	'shipping':5.99,
+			// 	'value':9.99
+			// });
 		}
 </script>
 

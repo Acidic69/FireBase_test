@@ -28,7 +28,13 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-6H45');</script>
+    <!-- End Google Tag Manager -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -67,11 +73,11 @@
 </script>
 <script>
 		function test_click(){
-				firebase.analytics().logEvent('nav_click ', {
-  				'eventAction':'test_click_action',
-  				'eventCategory':'test_click_category',
-  				'eventLabel':'test_click_label'
-					});
+				// firebase.analytics().logEvent('nav_click ', {
+  		// 		'eventAction':'test_click_action',
+  		// 		'eventCategory':'test_click_category',
+  		// 		'eventLabel':'test_click_label'
+				// 	});
 		}
 	</script>
 	<script>
@@ -88,38 +94,38 @@
 			gtag('event', 'view_item_list', {
 			  	items: [{
 			   	 item_id: 'SKU_12345',
-			    	item_name: 'jeggings',
+			    	item_name: 'jeggings gtag',
 			    	value: 9.99,
 			   	 index: 5
 			  	}],
-			  	item_list_name: 'Related products',
-			  	item_list_id: 'related_products',
+			  	item_list_name: 'Related products gtag',
+			  	item_list_id: 'related_products gtag',
 			});
 
-			firebase.analytics().logEvent('view_item_list',{
-				'item_id':'1234',
-				'item_name':'home_page',
-				'item_catogory':'test_category'
-			});
+			// firebase.analytics().logEvent('view_item_list',{
+			// 	'item_id':'1234',
+			// 	'item_name':'home_page',
+			// 	'item_catogory':'test_category'
+			// });
 		}
 		function product_click(){
-			firebase.analytics().logEvent('select_item',{
-				'content_type':'nav_menue',
-				'items':[
-				{
-					'item_id':'1234',
-					'item_name':'home',
-					'item_category':'home_page',
-					'list_position':1,
-					'value':10000
-				}
-				]
-			});
+			// firebase.analytics().logEvent('select_item',{
+			// 	'content_type':'nav_menue',
+			// 	'items':[
+			// 	{
+			// 		'item_id':'1234',
+			// 		'item_name':'home',
+			// 		'item_category':'home_page',
+			// 		'list_position':1,
+			// 		'value':10000
+			// 	}
+			// 	]
+			// });
 
 		}
 		function product_add(){
 			gtag('event', 'add_to_cart', {
-  				currency: 'USD',
+  				currency: 'USD gtag',
   				items: [{
     			item_id: 'SKU_12345',
     			item_name: 'jeggings',
