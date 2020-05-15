@@ -66,7 +66,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>
 	function test_click(){
 		firebase.analytics().logEvent('nav_click ', {
-			'eventAction':this.innerText,
+			'eventAction':'nav_click',
 			'eventCategory':'nav_manue',
 			'eventLabel':'nav_clicked'
 		});
@@ -96,7 +96,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		firebase.analytics().logEvent('select_item',{
 			'content_type':'nav_menue',
 			'item_id':'1234',
-			'item_name':e.target.innerText,
+			'item_name':'test_nav',
 			'item_category':'home_page',
 			'value':10000
 		});
@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	function product_add(e){
 		firebase.analytics().logEvent('add_to_cart',{
 			'item_id':'12345',
-			'item_name':e.target.firstElementChild.innerText,
+			'item_name':'shave',
 			'item_category':'home_page',
 			'value':5
 		});
