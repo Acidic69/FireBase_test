@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				'user_id':userid()
 			}
 		});
-		
+
 
 		var page_name=document.getElementsByClassName("nav-item active")[0].innerText;
 		firebase.analytics().logEvent('view_item_list',{
@@ -92,20 +92,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			'item_catogory':page_name
 		});
 	}
-	function product_click(){
+	function product_click(e){
 		firebase.analytics().logEvent('select_item',{
 			'content_type':'nav_menue',
 			'item_id':'1234',
-			'item_name':this.innerText,
+			'item_name':e.target.innerText,
 			'item_category':'home_page',
 			'value':10000
 		});
 
 	}
-	function product_add(){
+	function product_add(e){
 		firebase.analytics().logEvent('add_to_cart',{
 			'item_id':'12345',
-			'item_name':this.firstElementChild.innerText,
+			'item_name':e.target.firstElementChild.innerText,
 			'item_category':'home_page',
 			'value':5
 		});
