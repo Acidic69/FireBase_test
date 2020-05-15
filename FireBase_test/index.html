@@ -67,11 +67,11 @@
 </script>
 <script>
 		function test_click(){
-				firebase.analytics().logEvent('nav_click ', {
-  				'eventAction':'test_click_action',
-  				'eventCategory':'test_click_category',
-  				'eventLabel':'test_click_label'
-					});
+				// firebase.analytics().logEvent('nav_click ', {
+  		// 		'eventAction':'test_click_action',
+  		// 		'eventCategory':'test_click_category',
+  		// 		'eventLabel':'test_click_label'
+				// 	});
 		}
 	</script>
 	<script>
@@ -79,12 +79,12 @@
 			return(Math.floor((Math.random() * 100) + 1))
 		}
 		onload=function(){
-			firebase.analytics().logEvent('login',{
-			'user_id':userid(),
-			 user_parameters: {
-			 		'user_id':userid()
-			 }
-			});
+			// firebase.analytics().logEvent('login',{
+			// 'user_id':userid(),
+			//  user_parameters: {
+			//  		'user_id':userid()
+			//  }
+			// });
 			gtag('event', 'view_item_list', {
 			  	items: [{
 			   	 item_id: 'SKU_12345',
@@ -96,25 +96,25 @@
 			  	item_list_id: 'related_products',
 			});
 
-			firebase.analytics().logEvent('view_item_list',{
-				'item_id':'1234',
-				'item_name':'home_page',
-				'item_catogory':'test_category'
-			});
+			// firebase.analytics().logEvent('view_item_list',{
+			// 	'item_id':'1234',
+			// 	'item_name':'home_page',
+			// 	'item_catogory':'test_category'
+			// });
 		}
 		function product_click(){
-			firebase.analytics().logEvent('select_item',{
-				'content_type':'nav_menue',
-				'items':[
-				{
-					'item_id':'1234',
-					'item_name':'home',
-					'item_category':'home_page',
-					'list_position':1,
-					'value':10000
-				}
-				]
-			});
+			// firebase.analytics().logEvent('select_item',{
+			// 	'content_type':'nav_menue',
+			// 	'items':[
+			// 	{
+			// 		'item_id':'1234',
+			// 		'item_name':'home',
+			// 		'item_category':'home_page',
+			// 		'list_position':1,
+			// 		'value':10000
+			// 	}
+			// 	]
+			// });
 
 		}
 		function product_add(){
@@ -127,34 +127,34 @@
   				}],
   			value: 9.99
 			});
-			firebase.analytics().logEvent('add_to_cart',{
-				'items':[
-				{
-					'item_id':'12345',
-					'item_name':'shaving',
-					'item_category':'home_page',
-					'list_position':1,
-					'value':5
-				}
-				],
-				'value':5
-			});
+			// firebase.analytics().logEvent('add_to_cart',{
+			// 	'items':[
+			// 	{
+			// 		'item_id':'12345',
+			// 		'item_name':'shaving',
+			// 		'item_category':'home_page',
+			// 		'list_position':1,
+			// 		'value':5
+			// 	}
+			// 	],
+			// 	'value':5
+			// });
 
 		}
 		function product_checkout(){
 
-		firebase.analytics().logEvent('add_shipping_info',{
-				'items':[
-				{
-					'item_id':'1234565',
-					'item_name':'appointment',
-					'item_category':'home_page',
-					'list_position':1,
-					'value':0
-				}
-				],
-				'value':0
-			});
+		// firebase.analytics().logEvent('add_shipping_info',{
+		// 		'items':[
+		// 		{
+		// 			'item_id':'1234565',
+		// 			'item_name':'appointment',
+		// 			'item_category':'home_page',
+		// 			'list_position':1,
+		// 			'value':0
+		// 		}
+		// 		],
+		// 		'value':0
+		// 	});
 
 
 		}
