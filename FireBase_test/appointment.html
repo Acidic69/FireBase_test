@@ -73,13 +73,23 @@
 
 		function product_purchase(){
 			firebase.analytics().logEvent('purchase',{
-				"transaction_id": "24.031608523954162",
+				"transaction_id": "t24",
 				"item_id": "P12345",
 				'item_name':'appointment',
 				'item_category':'home_page',
 				'price':9.99,
 				'shipping':5.99,
 				'value':9.99
+			});
+		
+		firebase.analytics().logEvent('purchase',{
+				"transaction_id": "t1234567_dup",
+				"item_id": "P12345_dup",
+				'item_name':'appointment',
+				'item_category':'home_page',
+				'price':9.99,
+				'shipping':5.99,
+				'item_value':100.0
 			});
 		}
 		</script>
